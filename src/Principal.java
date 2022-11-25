@@ -29,6 +29,10 @@ public class Principal {
                 String numeroRomano = numerosRomanos.convertirNumeroRomanos(lecturaEntero());
                 System.out.println(numeroRomano);
                 break;
+            case 4:
+                Fibonacci fibonacci = new Fibonacci();
+                break;
+
         }
 
 
