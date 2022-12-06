@@ -15,7 +15,7 @@ public class Principal {
         return palabra;
     }
 
-    public static void menuPrincipal (){
+    public static void menuPrincipal () {
         Integer opcion = lecturaEntero();
         switch (opcion){
             case 1:
@@ -32,13 +32,15 @@ public class Principal {
             case 4:
                 Fibonacci fibonacci = new Fibonacci();
                 break;
-
+            case 5:
+                CuantosDias cuantosDias = new CuantosDias(lecturaString(), lecturaString());
+                break;
+            case 6:
+                NumeroPerdido numeroPerdido = new NumeroPerdido();
+                numeroPerdido.numerosPerdidos();
+                break;
         }
-
-
-
     }
-
 
     public static void main(String[] args) {
         menuPrincipal();

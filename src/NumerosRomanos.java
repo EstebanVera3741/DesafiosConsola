@@ -1,5 +1,3 @@
-import java.io.OptionalDataException;
-
 public class NumerosRomanos {
 
     private String [] numerosRomanos = {"M", "CMXC", "CM", "D", "CDXC", "CD", "C",
