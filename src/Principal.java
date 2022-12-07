@@ -40,6 +40,9 @@ public class Principal {
                 numeroPerdido.numerosPerdidos();
                 break;
             case 7:
+                SegundoNumero segundoNumero = new SegundoNumero();
+                break;
+            case 8:
                 NumeroPrimo numeroPrimo = new NumeroPrimo(lecturaEntero());
                 break;
 
