@@ -6,6 +6,9 @@ public class NumeroPrimo {
 
     public void soyNumeroPrimo (Integer verificarNumeroPrimo){
         String soyPrimo = "No soy numero Primo:  " + verificarNumeroPrimo;
+        if (verificarNumeroPrimo == 2){
+            soyPrimo = "Soy un numero Primo:  " + verificarNumeroPrimo;
+        }
         if (verificarNumero(verificarNumeroPrimo) == true) {
             soyPrimo = "Soy un numero Primo:  " + verificarNumeroPrimo;
         }
@@ -14,11 +17,11 @@ public class NumeroPrimo {
 
     public boolean verificarNumero (Integer verificarNumeroPrimo){
 
-        boolean esNumeroPrimo = false;
+        boolean esNumeroPrimo = true;
 
         for (int i = 2; i < verificarNumeroPrimo; i++){
             if (verificarNumeroPrimo % i == 0){
-                esNumeroPrimo = true;
+                esNumeroPrimo = false;
             }
         }
         return esNumeroPrimo;
