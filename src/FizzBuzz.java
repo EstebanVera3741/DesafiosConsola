@@ -1,20 +1,25 @@
+import javax.swing.*;
+
 public class FizzBuzz {
 
     public FizzBuzz (){
         Integer cantidadNumeros = 100;
+        String resultado = "";
+
         for (Integer i = 1; i <= cantidadNumeros; i++){
             if (i % 3 == 0 && i % 5 == 0){
-                System.out.println("FizzBuzz");
+                resultado += " FizzBuzz, \n";
             }
             else if (i % 5 == 0){
-                System.out.println("Buzz");
+                resultado += " Buzz, ";
             }
             else if (i % 3 == 0){
-                System.out.println("Fizz");
+                resultado += " Fizz, ";
             }
             else {
-                System.out.println(i);
+                resultado += " " + i + ", ";
             }
         }
+        JOptionPane.showMessageDialog(null, resultado);
     }
 }

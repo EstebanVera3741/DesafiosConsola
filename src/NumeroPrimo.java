@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class NumeroPrimo {
 
     public NumeroPrimo(Integer verificarNumeroPrimo) {
@@ -12,7 +14,7 @@ public class NumeroPrimo {
         if (verificarNumero(verificarNumeroPrimo) == true) {
             soyPrimo = "Soy un numero Primo:  " + verificarNumeroPrimo;
         }
-        System.out.println(soyPrimo);
+        JOptionPane.showMessageDialog(null, soyPrimo);
     }
 
     public boolean verificarNumero (Integer verificarNumeroPrimo){

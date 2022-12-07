@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,9 +15,8 @@ public class SegundoNumero {
 
     public void agregarNumerosLista (){
 
-        Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 5; i++){
-            listaNumeros.add(scanner.nextInt());
+            listaNumeros.add(Integer.valueOf(JOptionPane.showInputDialog("Ingresa el numero")));
         }
         convertirNumerosArreglo();
     }
@@ -28,6 +28,6 @@ public class SegundoNumero {
         for (int i = 0; i < arregloNumeros.length - 1; i++){
             segundoNumero = arregloNumeros [i];
         }
-        System.out.println(segundoNumero);
+        JOptionPane.showMessageDialog(null, "El segundo mayor numero es : " + segundoNumero);
     }
 }

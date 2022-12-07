@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Arrays;
 
 public class Anagrama {
@@ -10,11 +11,15 @@ public class Anagrama {
         String resultadoPalabraUno = verificarPalabrasIguales(this.palabraUno);
         String resultadoPalabraDos = verificarPalabrasIguales(this.palabraDos);
         if(resultadoPalabraUno.equals(resultadoPalabraDos)){
-            System.out.println("las palabras son iguales");
+            JOptionPane.showMessageDialog(null, "las palabras son iguales");
         }
         else {
             boolean resultado = verificarCantidadLetras(this.palabraUno, this.palabraDos);
-            System.out.println(resultado);
+            if (resultado){
+                JOptionPane.showMessageDialog(null, "Las Palabras son Anagrama:     " + resultado);
+            }else {
+                JOptionPane.showMessageDialog(null, "Las Palabras NO son Anagrama:     " + resultado);
+            }
         }
     }
     public boolean verificarCantidadLetras (String [] palabraUno, String [] palabraDos){

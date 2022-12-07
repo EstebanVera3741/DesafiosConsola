@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,13 +7,12 @@ public class NumeroPerdido {
 
     public NumeroPerdido() {
         try{
-            Scanner scanner = new Scanner(System.in);
             for (int i = 0; i < 2; i++){
-                numeros.add(scanner.nextInt());
+                numeros.add(Integer.valueOf(JOptionPane.showInputDialog("Ingrese el numero")));
             }
         }
         catch (Exception e){
-            System.out.println("Solo se puede escribir numeros enteros");
+            JOptionPane.showMessageDialog(null, "Solo se puede escribir numeros enteros");
         }
 
     }
@@ -21,19 +21,18 @@ public class NumeroPerdido {
         try {
             Integer valorUno = numeros.get(0);
             Integer valorDos = numeros.get(1);
-            Integer valor;
+            String valor = "";
 
             if (valorUno < valorDos) {
                 for (int i = valorUno; i < valorDos - 1; i++) {
-                    valor = i + 1;
-                    System.out.println(valor);
+                    valor += i + 1 + "  ";
                 }
             } else {
                 for (int i = valorDos; i < valorUno - 1; i++) {
-                    valor = i + 1;
-                    System.out.println(valor);
+                    valor += i + 1 + "  ";
                 }
             }
+            JOptionPane.showMessageDialog(null, valor);
         }
         catch (Exception e){
 

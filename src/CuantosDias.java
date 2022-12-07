@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -23,8 +24,8 @@ public class CuantosDias {
             dias = (int) ((fechaDos.getTime() - fechaUno.getTime()) /86400000);
         }
         catch (Exception e){
-            System.out.println("Digita la fecha de esta forma 'dd/mm/yyyy'");
+            JOptionPane.showMessageDialog(null, "Digita la fecha de esta forma 'dd/mm/yyyy'");
         }
-        System.out.println(dias);
+        JOptionPane.showMessageDialog(null, "Hay " + dias + " dias de diferencia entre las fechas");
     }
 }
